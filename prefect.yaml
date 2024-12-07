@@ -1,0 +1,33 @@
+version: 3
+flows:
+- name: currency_pipeline_flow
+  parameters: {}
+  tags: []
+  work_pool:
+    name: default-agent-pool
+    job_variables: {}
+  schedule:
+    cron: 0 * * * *      # Runs at the top of every hour
+    timezone: UTC        # Adjust timezone as needed
+deployments:
+- name: Currency Pipeline Dev
+  version:
+  tags: []
+  concurrency_limit:
+  description:
+  entrypoint: flow.py:currency_pipeline_flow
+  parameters: {}
+  work_pool:
+    name: currency_pipeline_pool
+    work_queue_name:
+    job_variables: {}
+  schedules:
+  - cron: 0 * * * *
+    timezone: UTC
+    day_or: true
+    active: true
+  enforce_parameter_schema: true
+  pull:
+  - prefect.deployments.steps.git_clone:
+      repository: https://github.com/Mani-Biglari/currency_pipeline.git
+      branch: main

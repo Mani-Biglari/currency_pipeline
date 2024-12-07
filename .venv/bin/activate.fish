@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/manibiglari/Documents/PIPEDRIVE_PROJECT_2/currency_pipeline/.venv"
+set -gx VIRTUAL_ENV "/Users/manibiglari/Documents/PIPEDRIVE_PROJECT_3/currency_pipeline/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
