@@ -37,7 +37,7 @@ def load_exchange_rates_to_snowflake(rates):
 # Task to trigger dbt Cloud job
 @task
 def trigger_dbt_cloud_job():
-    dbt_cloud_api_url = "https://iw734.us1.dbt.com/api/v2/accounts/70471823404751/jobs/70471823403899/run/"
+    dbt_cloud_api_url = "https://iw734.us1.dbt.com/api/v2/accounts/70471823404751/jobs/70471823404154/run/"
     dbt_cloud_api_key = "dbtu_rPo86M46J5KOpaBcD33ibO9QsIaaI69WICs43yyHBv2xkDIHnc"
 
     headers = {
