@@ -8,7 +8,7 @@ if __name__ == "__main__":
         source=SOURCE_REPO,
         entrypoint="flow.py:currency_pipeline_flow", # Specific flow to run
     ).deploy(
-        name="first-deployment",
+        name="Currency Pipeline Dev",
         work_pool_name="currency_pipeline_pool", # Work pool target
         cron="* * * * *", # Cron schedule (every minute)
     )
