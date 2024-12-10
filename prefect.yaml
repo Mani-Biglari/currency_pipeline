@@ -7,8 +7,8 @@ flows:
     name: default-agent-pool
     job_variables: {}
   schedule:
-    cron: "*/15 * * * *"  # Runs every 15 minutes
-    timezone: UTC         # Adjust timezone as needed
+    cron: "* * * * *"  # Runs every minutes
+    timezone: UTC
 deployments:
 - name: Currency Pipeline Dev
   version:
@@ -22,7 +22,7 @@ deployments:
     work_queue_name:
     job_variables: {}
   schedules:
-  - cron: "*/15 * * * *"  # Runs every 15 minutes
+  - cron: "* * * * *"  # Runs every minutes
     timezone: UTC
     day_or: true
     active: true
